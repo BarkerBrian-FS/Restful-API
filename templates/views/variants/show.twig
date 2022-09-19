@@ -1,16 +1,28 @@
 {% extends 'layouts/base.twig' %}
 
 {% block main_content %}
-    <h2>About {{variant.title}}</h2>
+    <h2>About {{ variant.title }}</h2>
     <ul style="list-style: none;">
         <li>
-            <label>Id: </label> {{variant.id}}
+            <label>Id: </label> {{ variant.id }}
         </li>
         <li>
-            <label>Title: </label> {{variant.title}}
+            <label>Title: </label> {{ variant.title }}
+        </li>
+        <li>
+            <label>Product: </label> {{ product.title }}
         </li>
          <li>
-            <label>Price: </label> {{variant.price}}
+            <label>Slug: </label> {{ product.slug }}
+        </li>
+         <li>
+            <label>Price: </label> {{ product.price }}
+        </li>
+         <li>
+            <label>Inventory: </label> {{ variant.inventory }}
+        </li>
+         <li>
+            <label>Description: </label> {{ product.description }}
         </li>
     </ul>
     <p>

@@ -3,12 +3,12 @@
         <input type="hidden" name="id" value="{{ image.id }}"/>
     {% endif %}
     <div>
-        <label for="title">Title: </label>
-        <input type="text" name="title" id="title" value="{{ image.title }}"/>
-    </div>
-    <div>
-        <label for="price">Price: </label>
-        <input type="number" min="0" step=".01" name="price" id="price"   value="{{ image.price }}"/>
+        <label>Variant: </label>
+        <select name='variantId'>
+            {% for variant in variants %}
+                <option value="{{ variant.id }}">{{ variant.title }}</option>
+            {% endfor %}
+        </select>
     </div>
      <div>
         <input type="submit"/>

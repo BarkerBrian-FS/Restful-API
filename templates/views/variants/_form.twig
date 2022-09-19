@@ -10,10 +10,15 @@
         <label for="product">Product: </label>
         <select name="productId">
             {% for product in products %}
-                <option value="{{ product.id }}">{{ product.title }}</option>
+                <option value="{{ product.id }}" 
+                {% if product.id == variant.productId %}selected="selected"{% endif %} >
+                {{ product.title }}
+                </option>
             {% endfor %}
         </select>
     </div>
+     <label for="inventory">Inventory: </label>
+      <input type="integer" name="inventory" id="inventory" value="{{ variant.inventory }}"/>
      <div>
         <input type="submit"/>
     </div>

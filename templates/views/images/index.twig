@@ -5,8 +5,8 @@
  <ul>
     {% for image in images %}
         <li>
-          {{image.title}}
-            {{image.price}} - 
+          {{image.id}}
+            {{variant.title}} - 
                 <a href="/images/{{image.id}}">Edit</a>
                 <a href="/images/{{image.id}}/delete">Delete</a>
         </li>
