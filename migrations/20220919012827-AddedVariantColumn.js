@@ -2,7 +2,7 @@
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.addColumn('Products','inventory', {
+    await queryInterface.addColumn('Variants','inventory', {
       type: Sequelize.INTEGER
     })
     /**
@@ -20,5 +20,6 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
+     await queryInterface.dropTable('Variants');
   }
 };

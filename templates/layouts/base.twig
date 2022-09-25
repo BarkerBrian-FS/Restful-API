@@ -4,6 +4,10 @@
     <meta charset="utf-8>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ASL Project</title>
+    {% block stylesheets %}
+		<link rel="stylesheet" type="text/css" href="app.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+	{% endblock %}
 </head>
 <body>
     {% include '../partials/_header.twig' %}
@@ -11,5 +15,10 @@
     {% endblock %}
     {% include '../partials/_footer.twig' %}
 
+    {% block scripts %}
+		<script type="text/javascript" src="app.js"></script>
+	{% endblock %}
+
 </body>
 <html>
+

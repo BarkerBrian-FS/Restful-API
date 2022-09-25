@@ -25,7 +25,13 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
-      }
+      },
+      slug: {
+        type: Sequelize.STRING
+      },
+      description: {
+        type: Sequelize.TEXT('long')
+      },
     });
   },
   async down(queryInterface, Sequelize) {
