@@ -6,7 +6,8 @@
 
 {% block main_content %}
 <div class = 'indexMain'>
-    <h3 class='h3'>Home</h3>
+    <h3 class='home'>Home</h3>
+ <div id="products-container" class="row">
     {% for product in products %}
 		 <a href="/store/products/{{ product.slug }}">
 			{% for variant in product.Variants %}

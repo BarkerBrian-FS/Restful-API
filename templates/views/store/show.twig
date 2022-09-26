@@ -4,13 +4,12 @@
 	<link rel="stylesheet" type="text/css" href="/public/product-page.css">
 {% endblock %}
 
-{% block title %}{{ product.title }} - {{ variant.title }}{% endblock %}
-
+{% block title %}Product Description{% endblock %}
 <div>
 	{% set defaultImage = variant.Images[0] %}
     <div >
 		<img src="/public/images/{{ defaultImage.id }}{{ defaultImage.extension }}" />
-        <div class="pro-img-list">
+        <div>
 			{% for image in variant.Images %}
 				<a href="#">
 					<img src="/public/images/{{ image.id }}{{ image.extension }}" alt="">
