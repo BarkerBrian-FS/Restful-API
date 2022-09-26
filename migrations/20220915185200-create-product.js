@@ -11,6 +11,9 @@ module.exports = {
       title: {
         type: Sequelize.STRING
       },
+      slug: {
+        type: Sequelize.STRING
+      },
       price: {
         type: Sequelize.INTEGER
       },
@@ -21,7 +24,14 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      description: {
+        type: Sequelize.TEXT('long')
+      },
+      isPublished: {
+        type: Sequelize.BOOLEAN
       }
+
     });
   },
   async down(queryInterface, Sequelize) {

@@ -1,0 +1,24 @@
+{% extends 'layouts/base.twig' %}
+
+<link rel="stylesheet" type="text/css" href="app.css">
+
+{% block title %}All Products{% endblock %}
+
+{% block main_content %}
+<div class = 'indexMain'>
+    <h3 class='home'>Home</h3>
+ <div id="products-container" class="row">
+    {% for product in products %}
+		 <a href="/store/products/{{ product.slug }}">
+			{% for variant in product.Variants %}
+			    {% set loopIndex = loop.index %}
+			{% for image in variant.Images %}
+			    <img class="pic-{{ loopIndex }}" src="/public/images/{{ image.id }}{{ image.extension }}">
+			{% endfor %}		
+		{% endfor %}
+</div>
+
+{% endblock %}
+
+
+{% endblock %}
