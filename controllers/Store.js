@@ -16,8 +16,11 @@ const show = async (req, res) => {
 			{ model: Variant, include: [Image] }
 		]
 	})
+
+	// Variant defaults to first variant in product
 	let variant = product.Variants[0]
 
+	// If ?v= is set in the URL then set the variant
 	if (req.query.v) {
 		variant = product.Variants.find(v => v.slug === req.query.v)
 	}
